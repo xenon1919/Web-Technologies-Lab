@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+    <link rel="stylesheet" href="dom.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DOM Manipulation in JavaScript</h1>
+        
+        <!-- Input Field -->
+        <label for="textInput">Enter Text:</label>
+        <input type="text" id="textInput" placeholder="Type something..." onchange="showChangeMessage(event)">
+        
+        <!-- Dropdown List -->
+        <label for="dropdown">Choose Option:</label>
+        <select id="dropdown" onchange="showChangeMessage(event)">
+            <option value="">Select an option</option>
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3">Option 3</option>
+        </select>
+        
+        <!-- Click Button -->
+        <button id="clickButton" onclick="showClickMessage()">Click Me!</button>
+
+        <!-- Mouseover Text -->
+        <p id="mouseoverText" onmouseover="showMouseOverMessage()">Hover over this text.</p>
+
+        <!-- Message Display -->
+        <p id="message"></p>
+    </div>
+
+    <script src="dom.js"></script>
+</body>
+</html>

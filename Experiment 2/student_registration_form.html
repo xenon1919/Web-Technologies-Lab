@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+            color: #007bff;
+            padding: 0 10px;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="date"], input[type="tel"], input[type="number"], input[type="file"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            align-self: center;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        #greeting {
+            margin-top: 20px;
+            text-align: center;
+            color: green;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Registration Form</h2>
+        <form id="registrationForm" onsubmit="return validateAndGreet();">
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" required>
+
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select...</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Academic Information</legend>
+
+                <label for="course">Course:</label>
+                <input type="text" id="course" name="course" required>
+
+                <label for="year">Year:</label>
+                <select id="year" name="year" required>
+                    <option value="">Select...</option>
+                    <option value="first">First</option>
+                    <option value="second">Second</option>
+                    <option value="third">Third</option>
+                    <option value="fourth">Fourth</option>
+                </select>
+
+                <label for="cgpa">CGPA:</label>
+                <input type="number" id="cgpa" name="cgpa" step="0.01" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Contact Information</legend>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+                <label for="location">Location:</label>
+                <input type="text" id="county" name="county" placeholder="County" required>
+                <input type="text" id="state" name="state" placeholder="State" required>
+                <input type="text" id="city" name="city" placeholder="City" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Upload Documents</legend>
+
+                <label for="photo">Upload Photo:</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+
+                <label for="resume">Upload Resume:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+
+                <label for="hobbies">Hobbies:</label>
+                <input type="text" id="hobbies" name="hobbies">
+
+                <label for="message">Any Additional Information:</label>
+                <textarea id="message" name="message"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Parent/Guardian Information</legend>
+
+                <label for="parent-name">Parent/Guardian Name:</label>
+                <input type="text" id="parent-name" name="parent-name" required>
+
+                <label for="parent-phone">Parent/Guardian Phone:</label>
+                <input type="tel" id="parent-phone" name="parent-phone" pattern="[0-9]{10}" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Previous Education</legend>
+
+                <label for="prev-school">Previous School/College:</label>
+                <input type="text" id="prev-school" name="prev-school" required>
+
+                <label for="prev-grade">Previous Grade/Percentage:</label>
+                <input type="number" id="prev-grade" name="prev-grade" step="0.01" required>
+            </fieldset>
+
+            <input type="submit" value="Register">
+        </form>
+        <div id="greeting"></div>
+    </div>
+    <script src="validation.js"></script>
+</body>
+</html>

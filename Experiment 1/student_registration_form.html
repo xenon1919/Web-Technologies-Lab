@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+    <form action="submit_form.html" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname" required><br>
+
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob" required><br>
+
+            <label for="gender">Gender:</label><br>
+            <select id="gender" name="gender" required>
+                <option value="">Select...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Academic Information</legend>
+
+            <label for="course">Course:</label><br>
+            <input type="text" id="course" name="course" required><br>
+
+            <label for="year">Year:</label><br>
+            <select id="year" name="year" required>
+                <option value="">Select...</option>
+                <option value="first">First</option>
+                <option value="second">Second</option>
+                <option value="third">Third</option>
+                <option value="fourth">Fourth</option>
+            </select><br>
+
+            <label for="cgpa">CGPA:</label><br>
+            <input type="number" id="cgpa" name="cgpa" step="0.01" required><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Information</legend>
+
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" required></textarea><br>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br>
+            
+            <label for="location">Location:</label><br>
+            <input type="text" id="county" name="county" placeholder="County" required><br>
+            <input type="text" id="state" name="state" placeholder="State" required><br>
+            <input type="text" id="city" name="city" placeholder="City" required><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Upload Documents</legend>
+
+            <label for="photo">Upload Photo:</label><br>
+            <input type="file" id="photo" name="photo" accept="image/*" required><br>
+            
+            <label for="resume">Upload Resume:</label><br>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+
+            <label for="hobbies">Hobbies:</label><br>
+            <input type="text" id="hobbies" name="hobbies"><br>
+
+            <label for="message">Any Additional Information:</label><br>
+            <textarea id="message" name="message"></textarea><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Parent/Guardian Information</legend>
+
+            <label for="parent-name">Parent/Guardian Name:</label><br>
+            <input type="text" id="parent-name" name="parent-name" required><br>
+
+            <label for="parent-phone">Parent/Guardian Phone:</label><br>
+            <input type="tel" id="parent-phone" name="parent-phone" pattern="[0-9]{10}" required><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Previous Education</legend>
+
+            <label for="prev-school">Previous School/College:</label><br>
+            <input type="text" id="prev-school" name="prev-school" required><br>
+
+            <label for="prev-grade">Previous Grade/Percentage:</label><br>
+            <input type="number" id="prev-grade" name="prev-grade" step="0.01" required><br>
+        </fieldset>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
