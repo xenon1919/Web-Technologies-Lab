@@ -1,0 +1,2 @@
+Hello, this is a newly created file!
+Appended text!
