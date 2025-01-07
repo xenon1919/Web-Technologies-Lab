@@ -34,30 +34,4 @@ const server = http.createServer(requestListener);
 server.listen(3000, () => {
   console.log("Server is running at http://localhost:3000/");
 });
-/* 
-How to Run:
-Save the file as request_response.js.
 
-Run the file in the terminal:
-
-bash
-Copy code
-node request_response.js
-Open a browser or use curl to test endpoints:
-
-Greet:
-bash
-Copy code
-http://localhost:3000/greet?name=Rishi
-Response: Hello, Rishi! Welcome to our Node.js server.
-Sum:
-bash
-Copy code
-http://localhost:3000/sum?num1=5&num2=10
-Response: The sum of 5 and 10 is 15.
-Accessing an invalid route:
-
-bash
-Copy code
-http://localhost:3000/invalid
-Response: Invalid route! Please try /greet or /sum with appropriate query parameters.*/
