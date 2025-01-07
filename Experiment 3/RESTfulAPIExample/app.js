@@ -51,44 +51,4 @@ app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
 
-/*
-Explanation of Endpoints
-GET /listUsers:
 
-Returns the list of all users in the system.
-Example:
-bash
-Copy code
-curl http://localhost:3000/listUsers
-POST /addUser:
-
-Adds a new user to the system.
-Example:
-bash
-Copy code
-curl -X POST -H "Content-Type: application/json" \
--d '{"name": "Alice", "age": 22}' \
-http://localhost:3000/addUser
-DELETE /deleteUser:
-
-Deletes a user by id.
-Example:
-bash
-Copy code
-curl -X DELETE -H "Content-Type: application/json" \
--d '{"id": 2}' \
-http://localhost:3000/deleteUser
-GET /:id:
-
-Fetches the details of a specific user by their id.
-Example:
-bash
-Copy code
-curl http://localhost:3000/1
-Expected Output
-Sr.No	URI	HTTP Method	POST Body	Result
-1	/listUsers	GET	empty	Show list of all the users.
-2	/addUser	POST	JSON String	Add details of a new user.
-3	/deleteUser	DELETE	JSON String	Delete an existing user.
-4	/:id	GET	empty	Show details of a specific user.
-*/
